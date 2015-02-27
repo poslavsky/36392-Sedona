@@ -1,7 +1,7 @@
 # Проект «Sedona»
 
 * Студент: [Александр Прядко](https://htmlacademy.ru/profile/id36392).
-* Наставник: `Unknown`.
+* Наставник: `Sergey Popov`.
 
 --
 
