@@ -1,10 +1,39 @@
 .hotel-form {
-  &__label {}
-  &__input {}
+  padding-right: 20px;
+  padding-left: 20px;
+  background: @bg-color-hotel;
+
+  &__label {
+    display: block;
+    text-align: left;
+    line-height: @line-height--form;
+    font-weight: @font-weidth--bold;
+
+    &--sum {
+
+    }
+  }
+
+  &__input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    line-height: @line-height--form;
+    font-weight: @font-weidth--bold;
+    border: none;
+    background-color: #f2f2f2;
+
+    &--sum {
+      width: 114px;
+      float: left;
+
+      &:nth-child(2) {
+        float: right;
+      }
+    }
+  }
   &__icon-calendar {}
-  &__label--sum {}
   &__icon-minus {}
-  &__input--sum {}
   &__icon-plus {}
   &__btn {}
 }

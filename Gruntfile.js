@@ -29,7 +29,14 @@ module.exports = function(grunt) {
       }
     },
 
-
+    notify: {
+      less:{
+        options:{
+            title: "CSS Files built",
+            message: "Less task complete"
+        }
+      }
+    },
 
 
     watch: {
@@ -57,6 +64,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', [
     'less',
     'autoprefixer',
+    'notify',
     'watch'
   ]);
 
@@ -65,6 +73,7 @@ module.exports = function(grunt) {
   grunt.registerTask('style', [
     'less',
     'autoprefixer',
+    'notify',
   ]);
 
 };

@@ -366,7 +366,15 @@ body {
 }
 h1 {
   font-size: 18px;
-  font-width: 700;
+  font-weidth: 700;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
 }
 .wrap {
   width: 320px;
@@ -374,7 +382,7 @@ h1 {
 }
 .title-like-h2 {
   font-size: 14px;
-  font-width: normal;
+  font-weidth: normal;
 }
 .nav {
   position: relative;
@@ -436,7 +444,16 @@ h1 {
   padding-left: 20px;
   text-align: center;
   color: #000000;
-  background: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+  background: transparent;
+}
+.reason-features--other .reason-features__item:nth-child(3) {
+  border-bottom: none;
+}
+.reason-features--other {
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #eee;
 }
 .reason-features__title {
   font-size: 21px;
@@ -447,4 +464,74 @@ h1 {
 }
 .reason-features__info {
   line-height: 24px;
+}
+.hotel__title {
+  padding: 20px;
+  line-height: 24px;
+  background: #ffffff;
+}
+.hotel__info {
+  padding: 20px;
+  line-height: 24px;
+  background: #ffffff;
+}
+.hotel-form {
+  padding-right: 20px;
+  padding-left: 20px;
+  background: #ffffff;
+}
+.hotel-form__label {
+  display: block;
+  text-align: left;
+  line-height: 34px;
+  font-weight: 700;
+}
+.hotel-form__input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  line-height: 34px;
+  font-weight: 700;
+  border: none;
+  background-color: #f2f2f2;
+}
+.hotel-form__input--sum {
+  width: 114px;
+  float: left;
+}
+.hotel-form__input--sum:last-child {
+  float: right;
+}
+.hotel-search__title {
+  line-height: 86px;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #766357;
+}
+.hotel-form {
+  padding-right: 20px;
+  padding-left: 20px;
+  background: #ffffff;
+}
+.hotel-form__label {
+  display: block;
+  text-align: left;
+  line-height: 34px;
+  font-weight: 700;
+}
+.hotel-form__input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  line-height: 34px;
+  font-weight: 700;
+  border: none;
+  background-color: #f2f2f2;
+}
+.hotel-form__input--sum {
+  width: 114px;
+  float: left;
+}
+.hotel-form__input--sum:nth-child(2) {
+  float: right;
 }
