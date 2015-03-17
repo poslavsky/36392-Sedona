@@ -1,13 +1,32 @@
 .footer{
+  position: relative;
+  min-height: 235px;
+  padding-top: 360px;
+
     &__box {
+      position: relative;
+      background-color: @bg-color--footer;
+      opacity: .9;
 
     }
 }
 
 .map {
-
+  position: absolute;
+  top: 0;
+  width: 320px;
+  height: 590px;
+  background: url('http://placehold.it/320x360') no-repeat 0 0;
 }
 
 .hashtag {
-
+  display: block;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  line-height: @line-height--footer;
+  color: @text-color--note;
+  font-family: @font-family;
+  font-weight: @font-weight--bold;
+  font-size: 21px;
 }

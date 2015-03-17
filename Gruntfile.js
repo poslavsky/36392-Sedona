@@ -9,6 +9,29 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
 
+    sprite:{
+      all: {
+        src: 'img/app/sprite/*.png',
+        dest: 'img/app/sprite.png',
+        imgPath: '../img/min/sprite.png',
+        destCss: 'less/helpers/sprite.less',
+        algorithm: 'binary-tree',
+        padding: 10
+      }
+    },
+
+
+    imagemin: {
+      images: {
+        files: [{
+          expand: true,
+          cwd: 'img/app',
+          src: ['**/*.{png,jpg,gif}', '!sprite/**/*'],
+          dest: 'img/min'
+        }]
+      }
+    },
+
 
     less: {
       style: {
@@ -38,6 +61,15 @@ module.exports = function(grunt) {
       }
     },
 
+    connect: {
+      server: {
+        options: {
+            port: 8000,
+            base: '.'
+        }
+      }
+    },
+
 
     watch: {
       style: {
@@ -62,9 +94,12 @@ module.exports = function(grunt) {
 
 
   grunt.registerTask('default', [
+    'sprite',
+    'imagemin',
     'less',
     'autoprefixer',
     'notify',
+    'connect',
     'watch'
   ]);
 
@@ -73,7 +108,7 @@ module.exports = function(grunt) {
   grunt.registerTask('style', [
     'less',
     'autoprefixer',
-    'notify',
+    'notify'
   ]);
 
 };

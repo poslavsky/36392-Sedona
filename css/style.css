@@ -1,3 +1,35 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+*/
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -366,7 +398,7 @@ body {
 }
 h1 {
   font-size: 18px;
-  font-weidth: 700;
+  font-weight: 700;
 }
 .clearfix:before,
 .clearfix:after {
@@ -382,7 +414,7 @@ h1 {
 }
 .title-like-h2 {
   font-size: 14px;
-  font-weidth: normal;
+  font-weight: normal;
 }
 .nav {
   position: relative;
@@ -415,6 +447,28 @@ h1 {
   border: none;
   cursor: pointer;
   z-index: 10;
+}
+.social {
+  margin-bottom: 40px;
+}
+.social__item {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  width: 48px;
+  height: 48px;
+  margin-right: 6px;
+  background-color: #81b3d2;
+}
+.design a {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  color: #000000;
+  font-size: 14px;
+  line-height: 30px;
+  padding-right: 40px;
 }
 .main-img {
   width: 100%;
@@ -475,63 +529,100 @@ h1 {
   line-height: 24px;
   background: #ffffff;
 }
-.hotel-form {
-  padding-right: 20px;
-  padding-left: 20px;
-  background: #ffffff;
-}
-.hotel-form__label {
-  display: block;
-  text-align: left;
-  line-height: 34px;
-  font-weight: 700;
-}
-.hotel-form__input {
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  line-height: 34px;
-  font-weight: 700;
-  border: none;
-  background-color: #f2f2f2;
-}
-.hotel-form__input--sum {
-  width: 114px;
-  float: left;
-}
-.hotel-form__input--sum:last-child {
-  float: right;
-}
 .hotel-search__title {
   line-height: 86px;
   font-size: 18px;
   color: #ffffff;
   background-color: #766357;
 }
+.footer {
+  position: relative;
+  min-height: 235px;
+  padding-top: 360px;
+}
+.footer__box {
+  position: relative;
+  background-color: #ffffff;
+  opacity: .9;
+}
+.map {
+  position: absolute;
+  top: 0;
+  width: 320px;
+  height: 590px;
+  background: url('http://placehold.it/320x360') no-repeat 0 0;
+}
+.hashtag {
+  display: block;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  line-height: 60px;
+  color: #000000;
+  font-family: 'PT Sans', sans-serif, Arial;
+  font-weight: 700;
+  font-size: 21px;
+}
 .hotel-form {
   padding-right: 20px;
+  padding-bottom: 50px;
   padding-left: 20px;
   background: #ffffff;
 }
 .hotel-form__label {
+  box-sizing: border-box;
   display: block;
+  vertical-align: top;
+  padding-left: 12px;
   text-align: left;
   line-height: 34px;
   font-weight: 700;
 }
-.hotel-form__input {
-  display: block;
+.hotel-form__label--sum {
   box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  min-width: 114px;
+  margin-right: 48px;
+}
+.hotel-form__label--sum:nth-of-type(2n) {
+  margin-right: 0;
+}
+.hotel-form__input {
+  box-sizing: border-box;
+  display: block;
   width: 100%;
+  padding-left: 12px;
+  padding-right: 36px;
   line-height: 34px;
   font-weight: 700;
   border: none;
   background-color: #f2f2f2;
 }
 .hotel-form__input--sum {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
   width: 114px;
-  float: left;
+  margin-right: 48px;
+  padding-right: 12px;
 }
-.hotel-form__input--sum:nth-child(2) {
-  float: right;
+.hotel-form__input--sum:nth-of-type(2n) {
+  margin-right: 0;
+}
+.hotel-form__btn {
+  box-sizing: border-box;
+  display: block;
+  line-height: 58px;
+  width: 100%;
+  margin-top: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: 'PT Sans', sans-serif, Arial;
+  font-weight: 700;
+  font-size: 21px;
+  border: none;
+  background-color: #81b3d2;
+  outline: none;
 }

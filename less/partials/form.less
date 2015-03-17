@@ -1,41 +1,70 @@
 .hotel-form {
   padding-right: 20px;
+  padding-bottom: 50px;
   padding-left: 20px;
-  background: @bg-color-hotel;
+  background: @bg-color--hotel;
 
   &__label {
+    box-sizing: border-box;
     display: block;
+    vertical-align: top;
+    padding-left: 12px;
     text-align: left;
     line-height: @line-height--form;
-    font-weight: @font-weidth--bold;
+    font-weight: @font-weight--bold;
 
     &--sum {
+      .inline-block;
+      min-width: 114px;
+      margin-right: 48px;
 
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
     }
   }
 
   &__input {
-    display: block;
     box-sizing: border-box;
+    display: block;
     width: 100%;
+    padding-left: 12px;
+    padding-right: 36px;
     line-height: @line-height--form;
-    font-weight: @font-weidth--bold;
+    font-weight: @font-weight--bold;
     border: none;
     background-color: #f2f2f2;
 
     &--sum {
+      .inline-block;
       width: 114px;
-      float: left;
+      margin-right: 48px;
+      padding-right: 12px;
 
-      &:nth-child(2) {
-        float: right;
+      &:nth-of-type(2n) {
+        margin-right: 0;
       }
     }
   }
   &__icon-calendar {}
   &__icon-minus {}
   &__icon-plus {}
-  &__btn {}
+  &__btn {
+    box-sizing: border-box;
+    display: block;
+    line-height: 58px;
+    width: 100%;
+    margin-top: 45px;
+    text-align: center;
+    text-transform: uppercase;
+    color: @text-color--main;
+    font-family: @font-family;
+    font-weight: @font-weight--bold;
+    font-size: 21px;
+    border: none;
+    background-color: @bg-color;
+    outline: none;
+  }
 }
 
 .date {
