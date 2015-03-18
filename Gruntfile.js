@@ -1,32 +1,114 @@
 module.exports = function(grunt) {
 
-  grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
 
-    // Lint Spaces in code
-    lintspaces: {
+
+  require('load-grunt-tasks')(grunt);
+
+
+
+  grunt.initConfig({
+
+
+    sprite:{
       all: {
-        src: [
-          '*.html'
-        ],
-        options: {
-          newline: true,
-          newlineMaximum: 2,
-          trailingspaces: true,
-          indentationGuess: true,
-          editorconfig: '.editorconfig',
-          ignores: [
-            'html-comments',
-            'js-comments'
-          ],
-          showTypes: true,
-          showCodes: true
+        src: 'img/app/sprite/*.png',
+        dest: 'img/app/sprite.png',
+        imgPath: '../img/min/sprite.png',
+        destCss: 'less/helpers/sprite.less',
+        algorithm: 'binary-tree',
+        padding: 10
+      }
+    },
+
+
+    imagemin: {
+      images: {
+        files: [{
+          expand: true,
+          cwd: 'img/app',
+          src: ['**/*.{png,jpg,gif}', '!sprite/**/*'],
+          dest: 'img/min'
+        }]
+      }
+    },
+
+
+    less: {
+      style: {
+        files: {
+          'css/style.css': ['less/style.less']
         }
       }
+    },
+
+
+
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 versions']
+      },
+      style: {
+        src: 'css/style.css'
+      }
+    },
+
+    notify: {
+      less:{
+        options:{
+            title: "CSS Files built",
+            message: "Less task complete"
+        }
+      }
+    },
+
+    connect: {
+      server: {
+        options: {
+            port: 8000,
+            base: '.'
+        }
+      }
+    },
+
+
+    watch: {
+      style: {
+        files: ['less/**/*.less'],
+        tasks: ['style'],
+        options: {
+          spawn: false,
+          livereload: true
+        },
+      },
+      html: {
+        files: ['*.html'],
+        options: {
+          spawn: false,
+          livereload: true
+        },
+      },
     }
+
   });
 
-  grunt.loadNpmTasks('grunt-lintspaces');
 
-  grunt.registerTask('lint', ['lintspaces']);
+
+  grunt.registerTask('default', [
+    'sprite',
+    'imagemin',
+    'less',
+    'autoprefixer',
+    'notify',
+    'connect',
+    'watch'
+  ]);
+
+
+
+  grunt.registerTask('style', [
+    'less',
+    'autoprefixer',
+    'notify'
+  ]);
+
 };

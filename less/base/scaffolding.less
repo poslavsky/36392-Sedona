@@ -1,0 +1,45 @@
+*, *:before, *:after { box-sizing: inherit; }
+
+
+html {
+}
+
+body {
+  font-family: @font-family;
+  font-size: @font-size-base;
+  text-align: center;
+  text-transform: @text-up;
+}
+
+h1 {
+  font-size: @font-size--h1;
+  font-weight: @font-weight--bold;
+}
+
+a {
+
+  &:hover,
+  &:focus {
+  }
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.wrap {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.title-like-h2 {
+  font-size: @font-size--h2;
+  font-weight: @font-weight--reg;
+}
+
