@@ -3,17 +3,19 @@
   position: absolute;
   width: @line-height--header;
   height: @line-height--header;
-  top: 0;
   right: 0;
   border: none;
+  background-color: transparent;
   cursor: pointer;
+  outline: none;
   z-index: 10;
 
   &--cancel {
-
+    top: 0;
+    background: url("../img/IMG/icon-cross.svg") no-repeat 50% 50%;
   }
 
   &--open {
-
+    background: url("../img/IMG/icon-menu.svg") no-repeat 50% 50%;
   }
 }

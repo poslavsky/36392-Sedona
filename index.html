@@ -50,25 +50,22 @@
           <p class="reason-features__info">Седона не атракцион для туристов, там течет своя жизнь</p>
         </div>
         <div class="reason__img">
-          <img src="#" alt="">
+          <img src="img/min/photo-city@1x.jpg" alt="city">
         </div>
       </div>
 
       <!-- Reason-features -->
       <div class="reason-features">
         <div class="reason-features__item">
-          <span class="reason-features__icon"></span>
-          <h3 class="reason-features__title">Жилье</h3>
+          <h3 class="reason-features__title"><span class="reason-features__icon icon-house"></span>Жилье</h3>
           <span class="reason-features__info">Рекомендуем пожить в настоящем мотеле, все как в кино!</span>
         </div>
         <div class="reason-features__item">
-          <span class="reason-features__icon"></span>
-          <h3 class="reason-features__title">Сувениры</h3>
+          <h3 class="reason-features__title"><span class="reason-features__icon icon-price"></span>Сувениры</h3>
           <span class="reason-features__info">Не только китайского, но и местного производства!</span>
         </div>
         <div class="reason-features__item">
-          <span class="reason-features__icon"></span>
-          <h3 class="reason-features__title">Еда</h3>
+          <h3 class="reason-features__title"><span class="reason-features__icon icon-food"></span>Еда</h3>
           <span class="reason-features__info">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</span>
         </div>
       </div>
@@ -86,7 +83,7 @@
           <p class="reason-features__info">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </div>
         <div class="reason__img">
-          <img src="#" alt="">
+          <img src="img/min/photo-bridge@1x.jpg" alt="">
         </div>
       </div>
     </section>
@@ -124,19 +121,27 @@
         <!-- Hotel-form -->
         <form class="hotel-form clearfix" action="#" method="post">
           <label class="hotel-form__label date" for="arrival">Дата заезда:</label>
-          <input class="hotel-form__input date" id="arrival" type="text">
-          <i class="hotel-form__icon-calendar"></i>
+          <div class="hotel-form__input-date">
+            <input class="hotel-form__input" id="arrival" type="text" value="24 Апреля 2014">
+            <a href="" class="hotel-form__icon hotel-form__icon--calendar"></a>
+          </div>
           <label class="hotel-form__label date" for="departure">Дата выезда:</label>
-          <input class="hotel-form__input date" id="departure" type="text">
-          <i class="hotel-form__icon-calendar"></i>
+          <div class="hotel-form__input-date">
+            <input class="hotel-form__input" id="departure" type="text" value="4 июля 2014">
+            <a href="" class="hotel-form__icon hotel-form__icon--calendar"></a>
+          </div>
           <label class="hotel-form__label hotel-form__label--sum" for="adult">Взрослые:</label>
           <label class="hotel-form__label hotel-form__label--sum" for="kids">Дети:</label>
-          <i class="hotel-form__icon-minus"></i>
-          <input class="hotel-form__input hotel-form__input--sum" id="adult" type="text">
-          <i class="hotel-form__icon-plus"></i>
-          <i class="hotel-form__icon-minus"></i>
-          <input class="hotel-form__input hotel-form__input--sum" id="kids" type="text">
-          <i class="hotel-form__icon-plus"></i>
+          <div class="hotel-form__input-count">
+            <a href="" class="hotel-form__icon hotel-form__icon--minus"></a>
+            <input class="hotel-form__input hotel-form__input--sum" id="adult" type="text" value="2">
+            <a href="" class="hotel-form__icon hotel-form__icon--plus"></a>
+          </div>
+          <div class="hotel-form__input-count">
+            <a href="" class="hotel-form__icon hotel-form__icon--minus"></a>
+            <input class="hotel-form__input hotel-form__input--sum" id="kids" type="text" value="0">
+            <a href="" class="hotel-form__icon hotel-form__icon--plus"></a>
+          </div>
           <button class="hotel-form__btn" type="submit">Найти</button>
         </form>
         <!-- hotel-form -->
@@ -151,7 +156,7 @@
     <footer class="footer">
 
       <!-- Map -->
-      <div class="map"></div>
+      <div class="map" id="map_canvas"></div>
       <!-- map -->
 
       <div class="footer__box">
@@ -181,7 +186,7 @@
 
   </div>
 
-  <!-- <script src="js/script.js"></script> -->
+  <script src="js/map.js"></script>
 
 </body>
 </html>

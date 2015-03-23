@@ -1,99 +1,30 @@
 .main-img {
+  box-sizing: border-box;
   width: 100%;
   height: 390px;
+  padding: 0 20px;
+  margin:0;
+  background: url('../img/min/img-bottom.png') no-repeat 50% 100%,
+              url('../img/min/photo-background@1x.jpg') no-repeat 50% 10%;
 
   &__text {
+    width: 100%;
+    height: 100%;
+    background: url('../img/img/text-welcome.svg') no-repeat 50% 10%,
+                url('../img/img/text-tothegorgeous.svg') no-repeat 50% 30%,
+                url('../img/img/text-sedona.svg') no-repeat 50% 50%,
+                url('../img/img/text-becausecanyon.svg') no-repeat 50% 85%;
 
   }
 }
-
-.reason {
-
-  &__box {
-    width: 100%;
-  }
-
-  &__img {
-    width: 100%;
-  }
-
-  &-features {
-
-
-    &__item {
-      padding-top: 55px;
-      padding-right: 20px;
-      padding-left: 20px;
-      padding-bottom: 45px;
-      color: @text-color--main;
-      background: @bg-color;
-
-      .reason-features & {
-        padding-left: 70px;
-        text-align: left;
-        color: @text-color--note;
-        background: @bg-color--features;
-
-      }
-
-      .reason-features--other & {
-        padding-left: 20px;
-        text-align: center;
-        color: @text-color--note;
-        border-bottom: 1px solid #e6e6e6;
-        background: transparent;
-
-        &:nth-child(3) {
-          border-bottom: none;
-        }
-      }
-    }
-
-    &--other {
-      padding-left: 20px;
-      padding-right: 20px;
-      background:#eee;
-    }
-
-    &__title {
-      font-size: @font-size--h3;
-    }
-
-    &__number {
-      display: block;
-      line-height: @line-height--numb;
-    }
-
-    &__info {
-      line-height: @line-height--info;
-
-    }
-
-    &__icon {
-
-    }
-  }
-}
-
 
 .hotel {
 
   &__title {
-    .hotel-mixin;
+    line-height: 60px;
   }
 
   &__info {
     .hotel-mixin;
-  }
-}
-
-.hotel-search {
-
-  &__title {
-    line-height: 86px;
-    font-size: @font-size--h1;
-    color: @text-color--main;
-    background-color: #766357;
-
   }
 }

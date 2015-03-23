@@ -2,21 +2,29 @@
   margin-bottom: 40px;
 
   &__item {
+    position: relative;
     .inline-block;
     width: 48px;
     height: 48px;
     margin-right: 6px;
-    background-color: @bg-color;
+    
+    &--tw{
+      background:  @bg-color url('../img/img/icon-twitter.svg') no-repeat 50% 50%;
+    }
 
+    &--fb {
+      background:  @bg-color url('../img/img/icon-facebook.svg') no-repeat 50% 50%;
+    }
 
-    &--tw {}
-    &--fb {}
-    &--youtube {}
+    &--youtube {
+      background:  @bg-color url('../img/img/icon-youtube.svg') no-repeat 50% 50%;
+    }
   }
 }
 
 .design {
   a {
+    position: relative;
     .inline-block;
     text-decoration: none;
     color: @text-color--note;
@@ -26,11 +34,11 @@
   }
 
   &__by {
-
+    background:  url('../img/img/logo-glukhanko.svg') no-repeat 90% 50%;
   }
 
   &__for {
-
+    background:  url('../img/img/logo-htmlacademy.svg') no-repeat 90% 50%;
   }
 
 }

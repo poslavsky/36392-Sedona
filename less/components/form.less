@@ -1,0 +1,129 @@
+.hotel-search {
+
+  &__title {
+    line-height: 86px;
+    font-size: @font-size--h1;
+    color: @text-color--main;
+    background-color: #766357;
+
+  }
+}
+
+.hotel-form {
+  .hotel-mixin;
+  padding-bottom: 50px;
+  font-size: 0;
+  background: @bg-color--white;
+
+  &__label {
+    box-sizing: border-box;
+    display: block;
+    vertical-align: top;
+    padding-left: 12px;
+    font-size: 12px;
+    text-align: left;
+    line-height: @line-height--form;
+    font-weight: @font-weight--bold;
+
+    &--sum {
+      .inline-block;
+      min-width: 114px;
+      margin-right: 48px;
+
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__input {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 12px;
+    padding-right: 36px;
+    text-transform: uppercase;
+    line-height: @line-height--form;
+    font-weight: @font-weight--bold;
+    border: none;
+    background-color: #f2f2f2;
+    outline: none;
+
+    &-date, &-count {
+      position: relative;
+      font-size: 12px;
+    }
+
+    &-count {
+      .inline-block;
+      width: 114px;
+      margin-right: 48px;
+
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
+    }
+
+    &--sum {
+      .inline-block;
+      padding-right: 12px;
+      text-align: center;
+
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
+    }
+
+    &.date {
+
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    .inline-block;
+    content: " ";
+    opacity: .2;
+
+
+    &--calendar {
+      width: 20px;
+      height: 22px;
+      top: 7px;
+      right: 9px;
+      background: url('../img/img/icon-calendar.svg') no-repeat 50% 10%;
+    }
+
+    &--minus {
+      width: 11px;
+      height: 3px;
+      top: 18px;
+      left: 14px;
+      background: url('../img/img/icon-minus.svg') no-repeat 50% 10%;
+    }
+
+    &--plus {
+      width: 11px;
+      height: 11px;
+      top: 14px;
+      right: 15px;
+      background: url('../img/img/icon-plus.svg') no-repeat 50% 10%;
+    }
+  }
+
+  &__btn {
+    box-sizing: border-box;
+    display: block;
+    line-height: 58px;
+    width: 100%;
+    margin-top: 45px;
+    text-align: center;
+    text-transform: uppercase;
+    color: @text-color--main;
+    font-family: @font-family;
+    font-weight: @font-weight--bold;
+    font-size: 21px;
+    border: none;
+    background-color: @bg-color;
+    outline: none;
+  }
+}

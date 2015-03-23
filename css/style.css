@@ -385,18 +385,16 @@ td,
 th {
   padding: 0;
 }
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
 body {
-  font-family: 'PT Sans', sans-serif, Arial;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   text-align: center;
   text-transform: uppercase;
+  overflow-x: hidden;
 }
 h1 {
+  margin-top: 40px;
+  margin-bottom: 0;
   font-size: 18px;
   font-weight: 700;
 }
@@ -408,77 +406,176 @@ h1 {
 .clearfix:after {
   clear: both;
 }
-.wrap {
-  width: 320px;
-  margin: 0 auto;
-}
 .title-like-h2 {
+  position: relative;
+  margin-top: 20px;
+  line-height: 24px;
   font-size: 14px;
   font-weight: normal;
 }
-.nav {
-  position: relative;
-  margin: 0;
-  padding: 0;
-}
-.nav__item {
+.title-like-h2::after {
+  position: absolute;
   box-sizing: border-box;
-  display: block;
-  width: 100%;
-  text-align: center;
-  line-height: 56px;
-  font-size: 18px;
-  font-weight: 700;
-  color: #ffffff;
-  text-decoration: none;
-  background: #81b3d2;
-  box-shadow: inset 0 -1px 1px 0 #ffffff, inset 0 1px 1px 0 #dddddd;
+  display: inline-block;
+  vertical-align: top;
+  content: " ";
+  left: -70%;
+  bottom: -37px;
+  width: 766px;
+  height: 37px;
+  background: url('../img/min/img-top.png') no-repeat 50% 0;
 }
-.navbar {
-  position: relative;
+.wrap {
+  width: 320px;
+  margin: 0 auto;
 }
 .btn {
   box-sizing: border-box;
   position: absolute;
   width: 56px;
   height: 56px;
-  top: 0;
   right: 0;
   border: none;
+  background-color: transparent;
   cursor: pointer;
+  outline: none;
   z-index: 10;
 }
-.social {
-  margin-bottom: 40px;
+.btn--cancel {
+  top: 0;
+  background: url("../img/IMG/icon-cross.svg") no-repeat 50% 50%;
 }
-.social__item {
+.btn--open {
+  background: url("../img/IMG/icon-menu.svg") no-repeat 50% 50%;
+}
+.hotel-search__title {
+  line-height: 86px;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #766357;
+}
+.hotel-form {
+  margin: 0;
+  padding: 0 20px;
+  line-height: 24px;
+  padding-bottom: 50px;
+  font-size: 0;
+  background: #ffffff;
+}
+.hotel-form__label {
+  box-sizing: border-box;
+  display: block;
+  vertical-align: top;
+  padding-left: 12px;
+  font-size: 12px;
+  text-align: left;
+  line-height: 34px;
+  font-weight: 700;
+}
+.hotel-form__label--sum {
   box-sizing: border-box;
   display: inline-block;
   vertical-align: top;
-  width: 48px;
-  height: 48px;
-  margin-right: 6px;
-  background-color: #81b3d2;
+  min-width: 114px;
+  margin-right: 48px;
 }
-.design a {
+.hotel-form__label--sum:nth-of-type(2n) {
+  margin-right: 0;
+}
+.hotel-form__input {
   box-sizing: border-box;
-  display: inline-block;
-  vertical-align: top;
-  text-decoration: none;
-  color: #000000;
-  font-size: 14px;
-  line-height: 30px;
-  padding-right: 40px;
-}
-.main-img {
   width: 100%;
-  height: 390px;
+  padding-left: 12px;
+  padding-right: 36px;
+  text-transform: uppercase;
+  line-height: 34px;
+  font-weight: 700;
+  border: none;
+  background-color: #f2f2f2;
+  outline: none;
+}
+.hotel-form__input-date,
+.hotel-form__input-count {
+  position: relative;
+  font-size: 12px;
+}
+.hotel-form__input-count {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  width: 114px;
+  margin-right: 48px;
+}
+.hotel-form__input-count:nth-of-type(2n) {
+  margin-right: 0;
+}
+.hotel-form__input--sum {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 12px;
+  text-align: center;
+}
+.hotel-form__input--sum:nth-of-type(2n) {
+  margin-right: 0;
+}
+.hotel-form__icon {
+  position: absolute;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  content: " ";
+  opacity: .2;
+}
+.hotel-form__icon--calendar {
+  width: 20px;
+  height: 22px;
+  top: 7px;
+  right: 9px;
+  background: url('../img/img/icon-calendar.svg') no-repeat 50% 10%;
+}
+.hotel-form__icon--minus {
+  width: 11px;
+  height: 3px;
+  top: 18px;
+  left: 14px;
+  background: url('../img/img/icon-minus.svg') no-repeat 50% 10%;
+}
+.hotel-form__icon--plus {
+  width: 11px;
+  height: 11px;
+  top: 14px;
+  right: 15px;
+  background: url('../img/img/icon-plus.svg') no-repeat 50% 10%;
+}
+.hotel-form__btn {
+  box-sizing: border-box;
+  display: block;
+  line-height: 58px;
+  width: 100%;
+  margin-top: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  border: none;
+  background-color: #81b3d2;
+  outline: none;
 }
 .reason__box {
   width: 100%;
 }
 .reason__img {
   width: 100%;
+  height: 256px;
+  overflow: hidden;
+}
+.reason__img img {
+  width: 512px;
+  height: 256px;
+  margin-left: -30%;
 }
 .reason-features__item {
   padding-top: 55px;
@@ -486,7 +583,7 @@ h1 {
   padding-left: 20px;
   padding-bottom: 45px;
   color: #ffffff;
-  background: #81b3d2;
+  background-color: #81b3d2;
 }
 .reason-features .reason-features__item {
   padding-left: 70px;
@@ -510,6 +607,7 @@ h1 {
   background: #eee;
 }
 .reason-features__title {
+  position: relative;
   font-size: 21px;
 }
 .reason-features__number {
@@ -519,26 +617,72 @@ h1 {
 .reason-features__info {
   line-height: 24px;
 }
-.hotel__title {
-  padding: 20px;
-  line-height: 24px;
-  background: #ffffff;
+.reason-features__icon {
+  position: absolute;
+  content: '';
+  left: -50px;
+  top: -15px;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
 }
-.hotel__info {
-  padding: 20px;
-  line-height: 24px;
-  background: #ffffff;
+.reason-features__icon.icon-house {
+  background: url('../img/img/icon-house.svg') no-repeat 0 0;
+  width: 37px;
+  height: 37px;
 }
-.hotel-search__title {
-  line-height: 86px;
-  font-size: 18px;
-  color: #ffffff;
-  background-color: #766357;
+.reason-features__icon.icon-price {
+  background: url('../img/img/icon-gift.svg') no-repeat 0 0;
+  width: 32px;
+  height: 38px;
+}
+.reason-features__icon.icon-food {
+  background-image: url(../img/min/sprite.png);
+  background-position: 0px -198px;
+  width: 37px;
+  height: 35px;
+}
+.social {
+  margin-bottom: 40px;
+}
+.social__item {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  width: 48px;
+  height: 48px;
+  margin-right: 6px;
+}
+.social__item--tw {
+  background: #81b3d2 url('../img/img/icon-twitter.svg') no-repeat 50% 50%;
+}
+.social__item--fb {
+  background: #81b3d2 url('../img/img/icon-facebook.svg') no-repeat 50% 50%;
+}
+.social__item--youtube {
+  background: #81b3d2 url('../img/img/icon-youtube.svg') no-repeat 50% 50%;
+}
+.design a {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  color: #000000;
+  font-size: 14px;
+  line-height: 30px;
+  padding-right: 40px;
+}
+.design__by {
+  background: url('../img/img/logo-glukhanko.svg') no-repeat 90% 50%;
+}
+.design__for {
+  background: url('../img/img/logo-htmlacademy.svg') no-repeat 90% 50%;
 }
 .footer {
   position: relative;
-  min-height: 235px;
-  padding-top: 360px;
+  padding-top: 415px;
 }
 .footer__box {
   position: relative;
@@ -548,9 +692,9 @@ h1 {
 .map {
   position: absolute;
   top: 0;
-  width: 320px;
+  width: 100%;
   height: 590px;
-  background: url('http://placehold.it/320x360') no-repeat 0 0;
+  background: url("../img/min/map.jpg") no-repeat 0 0;
 }
 .hashtag {
   display: block;
@@ -559,70 +703,76 @@ h1 {
   margin-top: 0;
   line-height: 60px;
   color: #000000;
-  font-family: 'PT Sans', sans-serif, Arial;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-weight: 700;
   font-size: 21px;
 }
-.hotel-form {
-  padding-right: 20px;
-  padding-bottom: 50px;
-  padding-left: 20px;
-  background: #ffffff;
+.nav {
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
-.hotel-form__label {
-  box-sizing: border-box;
-  display: block;
-  vertical-align: top;
-  padding-left: 12px;
-  text-align: left;
-  line-height: 34px;
-  font-weight: 700;
-}
-.hotel-form__label--sum {
-  box-sizing: border-box;
-  display: inline-block;
-  vertical-align: top;
-  min-width: 114px;
-  margin-right: 48px;
-}
-.hotel-form__label--sum:nth-of-type(2n) {
-  margin-right: 0;
-}
-.hotel-form__input {
+.nav__item {
   box-sizing: border-box;
   display: block;
   width: 100%;
-  padding-left: 12px;
-  padding-right: 36px;
-  line-height: 34px;
-  font-weight: 700;
-  border: none;
-  background-color: #f2f2f2;
-}
-.hotel-form__input--sum {
-  box-sizing: border-box;
-  display: inline-block;
-  vertical-align: top;
-  width: 114px;
-  margin-right: 48px;
-  padding-right: 12px;
-}
-.hotel-form__input--sum:nth-of-type(2n) {
-  margin-right: 0;
-}
-.hotel-form__btn {
-  box-sizing: border-box;
-  display: block;
-  line-height: 58px;
-  width: 100%;
-  margin-top: 45px;
   text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-  font-family: 'PT Sans', sans-serif, Arial;
+  line-height: 56px;
+  font-size: 18px;
   font-weight: 700;
-  font-size: 21px;
-  border: none;
-  background-color: #81b3d2;
-  outline: none;
+  color: #ffffff;
+  text-decoration: none;
+  background: #81b3d2;
+  box-shadow: inset 0 -1px 1px 0 #ffffff, inset 0 1px 1px 0 #dddddd;
+}
+.navbar {
+  position: relative;
+  min-height: 56px;
+}
+.navbar__logo {
+  position: absolute;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  content: " ";
+  top: 0;
+  left: 50%;
+  margin-left: -68px;
+  background: url("../img/IMG/form-logo-triangle.svg") no-repeat 50% 0;
+  width: 136px;
+  height: 70px;
+  z-index: 5;
+}
+.navbar__logo:before {
+  position: absolute;
+  background-image: url(../img/min/sprite.png);
+  background-position: -206px -58px;
+  width: 67px;
+  height: 56px;
+  content: " ";
+  left: 50%;
+  z-index: 10;
+  margin-left: -33px;
+}
+.main-img {
+  box-sizing: border-box;
+  width: 100%;
+  height: 390px;
+  padding: 0 20px;
+  margin: 0;
+  background: url('../img/min/img-bottom.png') no-repeat 50% 100%, url('../img/min/photo-background@1x.jpg') no-repeat 50% 10%;
+}
+.main-img__text {
+  width: 100%;
+  height: 100%;
+  background: url('../img/img/text-welcome.svg') no-repeat 50% 10%, url('../img/img/text-tothegorgeous.svg') no-repeat 50% 30%, url('../img/img/text-sedona.svg') no-repeat 50% 50%, url('../img/img/text-becausecanyon.svg') no-repeat 50% 85%;
+}
+.hotel__title {
+  line-height: 60px;
+}
+.hotel__info {
+  margin: 0;
+  padding: 0 20px;
+  line-height: 24px;
+  background: #ffffff;
 }
