@@ -1,13 +1,18 @@
 .social {
   margin-bottom: 40px;
 
+  .container(@col-3);
+  @media (min-width: @screen-md) {
+    .inline-block(@pos:middle);
+  }
+
   &__item {
     position: relative;
-    .inline-block;
+    .inline-block(@pos:middle);
     width: 48px;
     height: 48px;
     margin-right: 6px;
-    
+
     &--tw{
       background:  @bg-color url('../img/img/icon-twitter.svg') no-repeat 50% 50%;
     }
@@ -23,14 +28,21 @@
 }
 
 .design {
+
+  .container(@col-3);
+  @media (min-width: @screen-md) {
+    .inline-block(@pos:middle);
+  }
+
   a {
     position: relative;
-    .inline-block;
+    .inline-block(@pos:middle);
     text-decoration: none;
     color: @text-color--note;
     font-size: 14px;
     line-height: 30px;
     padding-right: 40px;
+
   }
 
   &__by {

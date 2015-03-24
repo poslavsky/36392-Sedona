@@ -1,36 +1,56 @@
 .hotel-search {
+  position: relative;
 
   &__title {
     line-height: 86px;
+    margin: 0 auto;
     font-size: @font-size--h1;
     color: @text-color--main;
     background-color: #766357;
-
   }
 }
 
 .hotel-form {
   .hotel-mixin;
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: 30px;
   padding-bottom: 50px;
   font-size: 0;
   background: @bg-color--white;
 
+  @media (min-width: @screen-md) {
+    position: absolute;
+    top: 86px;
+    z-index: 10;
+  }
+
   &__label {
     box-sizing: border-box;
     display: block;
-    vertical-align: top;
+    margin-bottom: 30px;
     padding-left: 12px;
     font-size: 12px;
     text-align: left;
     line-height: @line-height--form;
     font-weight: @font-weight--bold;
 
+    @media (min-width: @screen-md) {
+      .inline-block;
+      padding-left: 0;
+      padding-right: 17px;
+    }
+
     &--sum {
       .inline-block;
-      min-width: 114px;
-      margin-right: 48px;
+      float: left;
+      margin-right: 28%;
+
+      @media (min-width: @screen-md) {
+      }
 
       &:nth-of-type(2n) {
+        float: right;
         margin-right: 0;
       }
     }
@@ -41,6 +61,7 @@
     width: 100%;
     padding-left: 12px;
     padding-right: 36px;
+    margin-bottom: 30px;
     text-transform: uppercase;
     line-height: @line-height--form;
     font-weight: @font-weight--bold;
@@ -53,12 +74,21 @@
       font-size: 12px;
     }
 
+    &-date {
+
+      @media (min-width: @screen-md) {
+        .inline-block;
+        width: 345px;
+      }
+    }
+
     &-count {
       .inline-block;
       width: 114px;
-      margin-right: 48px;
+      float: left;
 
       &:nth-of-type(2n) {
+        float: right;
         margin-right: 0;
       }
     }

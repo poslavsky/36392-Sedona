@@ -1,21 +1,27 @@
 .footer{
   position: relative;
   padding-top: 415px;
+  font-size: 0;
 
     &__box {
       position: relative;
+      line-height: 65px;
+      vertical-align: middle;
       background-color: @bg-color--white;
       opacity: .9;
+      @media (min-width: @screen-md) {
+        line-height: 120px;
+      }
 
     }
 }
-
 .map {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 590px;
+  height: 100%;
   background: url("../img/min/map.jpg") no-repeat 0 0;
+  background-size: 100%;
 }
 
 .hashtag {
@@ -28,4 +34,10 @@
   font-family: @font-family;
   font-weight: @font-weight--bold;
   font-size: 21px;
+
+  .container(@col-3);
+
+  @media (min-width: @screen-md) {
+    .inline-block(@pos:middle);
+  }
 }

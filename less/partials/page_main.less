@@ -3,9 +3,15 @@
   width: 100%;
   height: 390px;
   padding: 0 20px;
-  margin:0;
+  margin: 0;
   background: url('../img/min/img-bottom.png') no-repeat 50% 100%,
-              url('../img/min/photo-background@1x.jpg') no-repeat 50% 10%;
+              url('../img/min/photo-background@1x.jpg') no-repeat 0 0;
+
+  @media (min-width: @screen-md) {
+    background: url('../img/min/img-bottom.png') no-repeat 50% 101%,
+                url('../img/min/photo-background@1x.jpg') no-repeat 0 0;
+    background-size: 100%;
+  }
 
   &__text {
     width: 100%;
@@ -19,12 +25,17 @@
 }
 
 .hotel {
+    max-width: 570px;
+    margin: 0 auto;
 
   &__title {
-    line-height: 60px;
+    padding: 0 8%;
+    margin: 0 auto;
+    line-height: 80px;
   }
 
   &__info {
     .hotel-mixin;
+    padding: 0 8% 30px;
   }
 }

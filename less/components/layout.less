@@ -1,9 +1,10 @@
 .wrap {
-  width: 320px;
+  min-width: 320px;
+  width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
-@media (min-width: 768px) {
-  .wrap {
-    width: 680px;
+.wrap {
+  .container(@col-1);
 }
