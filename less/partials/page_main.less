@@ -1,16 +1,16 @@
 .main-img {
   box-sizing: border-box;
   width: 100%;
-  height: 390px;
+  min-height: 390px;
   padding: 0 20px;
   margin: 0;
   background: url('../img/min/img-bottom.png') no-repeat 50% 100%,
               url('../img/min/photo-background@1x.jpg') no-repeat 0 0;
 
   @media (min-width: @screen-md) {
-    background: url('../img/min/img-bottom.png') no-repeat 50% 101%,
+    height: 510px;
+    background: url('../img/min/img-bottom.png') no-repeat 50% 100%,
                 url('../img/min/photo-background@1x.jpg') no-repeat 0 0;
-    background-size: 100%;
   }
 
   &__text {
@@ -31,11 +31,13 @@
   &__title {
     padding: 0 8%;
     margin: 0 auto;
-    line-height: 80px;
+    line-height: 76px;
+    font-size: 18px;
   }
 
   &__info {
     .hotel-mixin;
-    padding: 0 8% 30px;
+    font-size: 13px;
+    padding: 0 8% 22px;
   }
 }

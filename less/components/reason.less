@@ -26,10 +26,16 @@
       }
     }
   }
-  
-  &:nth-of-type(2) {
-    .reason-features__item {
-      float: right;
+    &:nth-of-type(2) {
+
+      .reason-features__item {
+        padding-top: 33px;
+      }
+
+    @media (min-width: @screen-md) {
+      .reason-features__item {
+        float: right;
+      }
     }
   }
 
@@ -38,7 +44,7 @@
 
     &__item {
       height: 100%;
-      padding: 44px 4.5% 35px;
+      padding: 58px 4.5% 25px;
       font-size: 14px;
       color: @text-color--main;
       background-color: @bg-color;
@@ -47,6 +53,7 @@
 
       @media (min-width: @screen-md) {
         .inline-block;
+        padding-top: 40px;
       }
 
       @media (min-width: @screen-lg) {
@@ -56,9 +63,19 @@
 
       .reason-features & {
         padding-left: 70px;
+        padding-top: 23px;
+        padding-bottom: 0;
         text-align: left;
         color: @text-color--note;
         background: @bg-color--white;
+
+        &:nth-of-type(1) {
+          padding-top: 33px;
+        }
+
+        &:last-of-type {
+          padding-bottom: 35px;
+        }
 
         @media (min-width: @screen-md) {
           padding-right: 4.5%;
@@ -66,14 +83,15 @@
           padding-left: 4.5%;
           text-align: center;
         }
+
         @media (min-width: @screen-lg) {
           padding-right: 5.5%;
           padding-left: 5.5%;
         }
       }
 
-      .reason-features--other & {
-        padding-left: 20px;
+      .reason-features.reason-features--other & {
+        padding: 21px 8% 15px;
         text-align: center;
         color: @text-color--note;
         border-bottom: 1px solid #e6e6e6;
@@ -95,23 +113,52 @@
       position: relative;
       margin: 0 auto;
       font-size: @font-size--h3;
+      line-height: 38px;
+
+      .reason-features & {
+        margin-bottom: 5px;
+      }
+
+      @media (min-width: @screen-md) {
+        margin-bottom: 5px;
+        line-height: 30px;
+        font-size: 18px;
+      }
+
     }
 
     &__number {
       display: block;
       line-height: @line-height--numb;
+
+       @media (min-width: @screen-md) {
+          margin-bottom: 20px;
+       }
     }
 
     &__info {
+      font-size: 13px;
       line-height: @line-height--info;
+      
+      @media (min-width: @screen-md) {
+        line-height: 22px;
+      }
+
+      .reason-features & {
+        line-height: 22px;
+      }
+
+      .reason-features.reason-features--other & {
+        font-size: 12px;
+      }
 
     }
 
     &__icon {
       position: absolute;
-      content: '';
-      left: -50px;
-      top: -15px;
+      content: " ";
+      left: -46px;
+      top: -5px;
       .inline-block;
 
       @media (min-width: @screen-md) {

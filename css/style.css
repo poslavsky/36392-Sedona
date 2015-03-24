@@ -395,17 +395,16 @@ body {
 h1 {
   margin-top: 40px;
   margin-bottom: 0;
-  font-size: 18px;
+  padding: 0 8%;
+  line-height: 25px;
+  font-size: 16px;
   font-weight: 700;
 }
 @media (min-width: 768px) {
   h1 {
-    font-size: 20px;
-    margin-top: 50px;
-    margin-right: auto;
-    margin-bottom: 20px;
-    margin-left: auto;
-    width: 500px;
+    margin-top: 57px;
+    margin-bottom: 30px;
+    font-size: 19px;
   }
 }
 .clearfix:before,
@@ -418,16 +417,19 @@ h1 {
 }
 .title-like-h2 {
   position: relative;
-  margin-top: 20px;
-  line-height: 24px;
-  font-size: 14px;
+  margin-top: 30px;
+  margin-bottom: 0;
+  padding: 0 8% 20px;
+  line-height: 25px;
+  word-spacing: -1px;
+  font-size: 13px;
   font-weight: normal;
 }
 @media (min-width: 768px) {
   .title-like-h2 {
     margin: 0 auto;
-    width: 500px;
-    font-size: 12px;
+    font-size: 13px;
+    padding-bottom: 52px;
   }
 }
 .title-like-h2::after {
@@ -437,7 +439,7 @@ h1 {
   vertical-align: top;
   content: " ";
   left: 0;
-  bottom: -38px;
+  bottom: -32px;
   width: 100%;
   height: 37px;
   background: url('../img/min/img-top.png') no-repeat 50% 0;
@@ -450,7 +452,7 @@ h1 {
 .wrap {
   min-width: 320px;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 .wrap {
@@ -469,7 +471,7 @@ h1 {
 .btn {
   box-sizing: border-box;
   position: absolute;
-  width: 56px;
+  width: 60px;
   height: 56px;
   right: 0;
   border: none;
@@ -496,7 +498,7 @@ h1 {
 .hotel-search__title {
   line-height: 86px;
   margin: 0 auto;
-  font-size: 18px;
+  font-size: 16px;
   color: #ffffff;
   background-color: #766357;
 }
@@ -506,7 +508,7 @@ h1 {
   line-height: 24px;
   box-sizing: border-box;
   width: 100%;
-  padding-top: 30px;
+  padding-top: 18px;
   padding-bottom: 50px;
   font-size: 0;
   background: #ffffff;
@@ -521,11 +523,10 @@ h1 {
 .hotel-form__label {
   box-sizing: border-box;
   display: block;
-  margin-bottom: 30px;
   padding-left: 12px;
   font-size: 12px;
   text-align: left;
-  line-height: 34px;
+  line-height: 36px;
   font-weight: 700;
 }
 @media (min-width: 768px) {
@@ -535,6 +536,7 @@ h1 {
     vertical-align: top;
     padding-left: 0;
     padding-right: 17px;
+    margin-bottom: 30px;
   }
 }
 .hotel-form__label--sum {
@@ -553,9 +555,9 @@ h1 {
   width: 100%;
   padding-left: 12px;
   padding-right: 36px;
-  margin-bottom: 30px;
+  margin-bottom: 18px;
   text-transform: uppercase;
-  line-height: 34px;
+  line-height: 36px;
   font-weight: 700;
   border: none;
   background-color: #f2f2f2;
@@ -680,14 +682,19 @@ h1 {
   }
 }
 .reason:nth-of-type(2) .reason-features__item {
-  float: right;
+  padding-top: 33px;
+}
+@media (min-width: 768px) {
+  .reason:nth-of-type(2) .reason-features__item {
+    float: right;
+  }
 }
 .reason-features {
   font-size: 0;
 }
 .reason-features__item {
   height: 100%;
-  padding: 44px 4.5% 35px;
+  padding: 58px 4.5% 25px;
   font-size: 14px;
   color: #ffffff;
   background-color: #81b3d2;
@@ -708,6 +715,7 @@ h1 {
     box-sizing: border-box;
     display: inline-block;
     vertical-align: top;
+    padding-top: 40px;
   }
 }
 @media (min-width: 1280px) {
@@ -718,9 +726,17 @@ h1 {
 }
 .reason-features .reason-features__item {
   padding-left: 70px;
+  padding-top: 23px;
+  padding-bottom: 0;
   text-align: left;
   color: #000000;
   background: #ffffff;
+}
+.reason-features .reason-features__item:nth-of-type(1) {
+  padding-top: 33px;
+}
+.reason-features .reason-features__item:last-of-type {
+  padding-bottom: 35px;
 }
 @media (min-width: 768px) {
   .reason-features .reason-features__item {
@@ -736,14 +752,14 @@ h1 {
     padding-left: 5.5%;
   }
 }
-.reason-features--other .reason-features__item {
-  padding-left: 20px;
+.reason-features.reason-features--other .reason-features__item {
+  padding: 21px 8% 15px;
   text-align: center;
   color: #000000;
   border-bottom: 1px solid #e6e6e6;
   background: transparent;
 }
-.reason-features--other .reason-features__item:nth-child(3) {
+.reason-features.reason-features--other .reason-features__item:nth-child(3) {
   border-bottom: none;
 }
 .reason-features--other {
@@ -754,20 +770,48 @@ h1 {
 .reason-features__title {
   position: relative;
   margin: 0 auto;
-  font-size: 21px;
+  font-size: 16px;
+  line-height: 38px;
+}
+.reason-features .reason-features__title {
+  margin-bottom: 5px;
+}
+@media (min-width: 768px) {
+  .reason-features__title {
+    margin-bottom: 5px;
+    line-height: 30px;
+    font-size: 18px;
+  }
 }
 .reason-features__number {
   display: block;
   line-height: 21px;
 }
+@media (min-width: 768px) {
+  .reason-features__number {
+    margin-bottom: 20px;
+  }
+}
 .reason-features__info {
+  font-size: 13px;
   line-height: 24px;
+}
+@media (min-width: 768px) {
+  .reason-features__info {
+    line-height: 22px;
+  }
+}
+.reason-features .reason-features__info {
+  line-height: 22px;
+}
+.reason-features.reason-features--other .reason-features__info {
+  font-size: 12px;
 }
 .reason-features__icon {
   position: absolute;
-  content: '';
-  left: -50px;
-  top: -15px;
+  content: " ";
+  left: -46px;
+  top: -5px;
   box-sizing: border-box;
   display: inline-block;
   vertical-align: top;
@@ -959,7 +1003,7 @@ h1 {
   width: 100%;
   text-align: center;
   line-height: 56px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: #ffffff;
   text-decoration: none;
@@ -1031,15 +1075,15 @@ h1 {
 .main-img {
   box-sizing: border-box;
   width: 100%;
-  height: 390px;
+  min-height: 390px;
   padding: 0 20px;
   margin: 0;
   background: url('../img/min/img-bottom.png') no-repeat 50% 100%, url('../img/min/photo-background@1x.jpg') no-repeat 0 0;
 }
 @media (min-width: 768px) {
   .main-img {
-    background: url('../img/min/img-bottom.png') no-repeat 50% 101%, url('../img/min/photo-background@1x.jpg') no-repeat 0 0;
-    background-size: 100%;
+    height: 510px;
+    background: url('../img/min/img-bottom.png') no-repeat 50% 100%, url('../img/min/photo-background@1x.jpg') no-repeat 0 0;
   }
 }
 .main-img__text {
@@ -1054,12 +1098,14 @@ h1 {
 .hotel__title {
   padding: 0 8%;
   margin: 0 auto;
-  line-height: 80px;
+  line-height: 76px;
+  font-size: 18px;
 }
 .hotel__info {
   margin: 0;
   padding: 0 20px;
   line-height: 24px;
   background: #ffffff;
-  padding: 0 8% 30px;
+  font-size: 13px;
+  padding: 0 8% 22px;
 }
