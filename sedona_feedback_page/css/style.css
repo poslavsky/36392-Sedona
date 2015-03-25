@@ -146,6 +146,8 @@ table {
 
 /* main fraimwork start here */
 .inbox, .col, i, .ico {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -187,7 +189,7 @@ i, .ico {
 /* basic typography */
 body {
   font-family: 'PT Sans', sans-serif;
-  color: #000;
+  color: black;
   text-transform: uppercase;
 }
 
@@ -247,6 +249,8 @@ form input[type='text'],
 form textarea,
 form select,
 form input[type='password'] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   outline: none;
   background: #f2f2f2;
@@ -255,9 +259,10 @@ form input[type='password'] {
   font-size: 18px;
   line-height: 20px;
   padding: 18px 22px;
-  color: #000;
+  color: black;
   text-transform: none;
   width: 100%;
+  -webkit-box-shadow: none;
   box-shadow: none;
   border: none;
   border: 1px solid #f2f2f2;
@@ -436,6 +441,7 @@ body {
 .wrapper {
   width: 1200px;
   margin: 0 auto;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   background: #fff;
 }
@@ -494,6 +500,7 @@ body {
   height: 61px;
   background-color: #f2f2f2;
   border: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
   cursor: pointer;
   font-size: 0;
@@ -502,12 +509,12 @@ body {
   background-color: #e5e5e5;
 }
 .counter-action.plus {
-  background-image: url(img/ico-action-minus.png);
+  background-image: url(img/ico-action-plus.png);
   background-repeat: no-repeat;
   background-position: center;
 }
 .counter-action.minus {
-  background-image: url(img/ico-action-plus.png);
+  background-image: url(img/ico-action-minus.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -633,6 +640,8 @@ body, html {
 .modal-content .top {
   background: #fff;
   padding: 50px 100px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   text-align: center;
 }
@@ -657,5 +666,3 @@ body, html {
 .footer {
   margin-top: 30px;
 }
-
-/*# sourceMappingURL=style.css.map */
