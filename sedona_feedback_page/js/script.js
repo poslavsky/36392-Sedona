@@ -2,32 +2,72 @@
 
   var plus = document.querySelector(".plus");
   var minus = document.querySelector(".minus");
-  var counter = document.querySelector(".counter-input").value;
+  var elements = document.querySelector(".counter-input");
+  var currentvalue;
+
+  plus.addEventListener("click", function () {
+    event.preventDefault();
+
+    currentvalue = (parseInt(elements.value) + 1);
+    elements.value = currentvalue;
+
+  });
+
+  minus.addEventListener("click", function () {
+    event.preventDefault();
+
+  if (elements.value >= 1) {
+    currentvalue = (parseInt(elements.value) - 1);
+    elements.value = currentvalue;
+  }
+
+  false
+
+  });
+
+})();
+
+
+
+
+
+
+
+/*
+
+(function() {
+
+  var pluses = document.querySelectorAll(".plus");
+  var minuses = document.querySelectorAll(".minus");
+  var elements = document.querySelector(".counter-input");
+  var currentvalue;
+
+
+  for (var i = 0; i < elements.length; i++) {
+
+  var plus = pluses[i];
+  var minus = minuses[i];
 
 
   plus.addEventListener("click", function () {
     event.preventDefault();
 
-    var i = 0;
-    var counter = i;
-
-    return function () {
-      i++;
-      return i;
-    };
-
-
+    currentvalue = (parseInt(element.value) + 1);
+    plus.parentNode.children(input).value = currentvalue;
 
   });
 
-/*var xhr = new XMLHttpRequest();
-xhr.open("get", "hello.txt");
-xhr.addEventListener("readystatechange", function() {
-if (xhr.readyState == 4) {
-console.log(xhr.responseText);
-}
-});
+  minus.addEventListener("click", function () {
+    event.preventDefault();
 
-xhr.send();*/
+  if (elements.value >= 1) {
+    currentvalue = (parseInt(element.value) - 1);
+    element.parentNode.children(input)value = currentvalue;
+  }
 
-})();
+  false
+
+  });
+};
+
+})();*/
