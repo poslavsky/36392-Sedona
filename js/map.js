@@ -1,3 +1,9 @@
+/*var mapOptions = {
+  center: new google.maps.LatLng(-34.397, 150.644),
+  zoom: 8,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+};*/
+
 function initialize() {
  var latlng = new google.maps.LatLng(34.8573, -111.795);
  var settings = {
