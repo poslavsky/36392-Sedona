@@ -13,6 +13,14 @@
     height: 48px;
     margin-right: 6px;
 
+    &:hover {
+      background-color: #669ec0;
+    }
+
+    &:active {
+      background-color: #5496bd;
+    }
+
     &--tw{
       background:  @bg-color url('../img/min/app/svg/icon-twitter.svg') no-repeat 50% 50%;
     }
@@ -41,16 +49,53 @@
     color: @text-color--note;
     font-size: 14px;
     line-height: 30px;
-    padding-right: 40px;
+    padding-right: 30px;
 
+    &:active {
+      color: #000;
+      opacity: 0.4;
+    }
   }
 
   &__by {
-    background:  url('../img/min/app/svg/logo-glukhanko.svg') no-repeat 90% 50%;
+
+    .svg-glukhanko {
+      .inline-block(@pos:middle);
+      width: 26px;
+      height: 30px;
+      margin-left: 5px;
+      fill: #000;
+
+      &:hover {
+        fill: @bg-color;
+      }
+
+      &:active {
+        fill: #000;
+        opacity: 0.4;
+      }
+    }
   }
 
   &__for {
-    background:  url('../img/min/app/svg/logo-htmlacademy.svg') no-repeat 90% 50%;
+
+    .svg-htmlacademy{
+      .inline-block(@pos:middle);
+      width: 26px;
+      height: 34px;
+      margin-left: 5px;
+      fill: #000;
+
+      &:hover {
+        fill: @bg-color;
+      }
+
+      &:active {
+        fill: #000;
+        opacity: 0.4;
+      }
+
+    }
   }
 
 }

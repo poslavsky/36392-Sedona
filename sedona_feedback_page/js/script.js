@@ -1,73 +1,33 @@
 (function() {
 
-  var plus = document.querySelector(".plus");
-  var minus = document.querySelector(".minus");
-  var elements = document.querySelector(".counter-input");
-  var currentvalue;
+  var plus = document.querySelectorAll(".plus");
+  var minus = document.querySelectorAll(".minus");
 
-  plus.addEventListener("click", function () {
-    event.preventDefault();
+  for(var i = 0; i < plus.length; i++) {
 
-    currentvalue = (parseInt(elements.value) + 1);
-    elements.value = currentvalue;
+    plus[i].addEventListener("click", function (event) {
+      event.preventDefault();
 
-  });
+      var count = this.parentNode.querySelector(".counter-input");
 
-  minus.addEventListener("click", function () {
-    event.preventDefault();
+      count.value =  (parseInt(count.value) + 1);
 
-  if (elements.value >= 1) {
-    currentvalue = (parseInt(elements.value) - 1);
-    elements.value = currentvalue;
-  }
+    })
+  };
 
-  false
+  for(var i = 0; i < minus.length; i++) {
 
-  });
+    minus[i].addEventListener("click", function (event) {
+      event.preventDefault();
+
+      var count = this.parentNode.querySelector(".counter-input");
+      var val = (parseInt(count.value) - 1);
+
+      if (val < 0) val = 0;
+
+      count.value =  val;
+
+    })
+  };
 
 })();
-
-
-
-
-
-
-
-/*
-
-(function() {
-
-  var pluses = document.querySelectorAll(".plus");
-  var minuses = document.querySelectorAll(".minus");
-  var elements = document.querySelector(".counter-input");
-  var currentvalue;
-
-
-  for (var i = 0; i < elements.length; i++) {
-
-  var plus = pluses[i];
-  var minus = minuses[i];
-
-
-  plus.addEventListener("click", function () {
-    event.preventDefault();
-
-    currentvalue = (parseInt(element.value) + 1);
-    plus.parentNode.children(input).value = currentvalue;
-
-  });
-
-  minus.addEventListener("click", function () {
-    event.preventDefault();
-
-  if (elements.value >= 1) {
-    currentvalue = (parseInt(element.value) - 1);
-    element.parentNode.children(input)value = currentvalue;
-  }
-
-  false
-
-  });
-};
-
-})();*/
