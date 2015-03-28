@@ -9,18 +9,72 @@
 
   @media (min-width: @screen-md) {
     height: 510px;
-    background: url('../img/min/img-bottom.png') no-repeat 50% 100%,
+    background: url('../img/min/img-bottom.png') no-repeat 0 100%,
                 url('../img/min/photo-background@1x.jpg') no-repeat 0 0;
+    background-size: contain, cover;
   }
 
-  &__text {
-    width: 100%;
-    height: 100%;
-    background: url('../img/img/text-welcome.svg') no-repeat 50% 10%,
-                url('../img/img/text-tothegorgeous.svg') no-repeat 50% 30%,
-                url('../img/img/text-sedona.svg') no-repeat 50% 50%,
-                url('../img/img/text-becausecanyon.svg') no-repeat 50% 85%;
+  @media and (min-width: @screen-md) and (min-device-pixel-ratio: 2) {
+    height: 510px;
+    background: url('../img/min/img-bottom.png') no-repeat 0 100%,
+                url('../img/min/photo-background@2x.jpg') no-repeat 0 0;
+    background-size: contain, cover;
+  }
+}
 
+.svg-welcome {
+  display: block;
+  width: 145px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 47px;
+  fill: @bg-color;
+
+  @media (min-width: @screen-md) {
+    width: 190px;
+    padding-top: 76px;
+  }
+}
+
+.svg-text-tothegorgeous {
+  display: block;
+  width: 196px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 8px;
+  fill:#8a7d75;
+
+  @media (min-width: @screen-md) {
+    width: 256px;
+    padding-top: 12px;
+  }
+}
+
+.svg-sedona {
+  display: block;
+  width: 280px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 60px;
+  fill: #fff;
+
+  @media (min-width: @screen-md) {
+    width: 458px;
+    padding-top: 53px;
+  }
+}
+
+.svg-because {
+  display: block;
+  width: 197px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 70px;
+  fill: #fff;
+
+  @media (min-width: @screen-md) {
+    width: 296px;
+    padding-top: 58px;
   }
 }
 

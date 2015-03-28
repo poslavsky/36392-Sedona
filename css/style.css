@@ -402,8 +402,11 @@ h1 {
 }
 @media (min-width: 768px) {
   h1 {
+    max-width: 450px;
     margin-top: 57px;
+    margin-right: auto;
     margin-bottom: 30px;
+    margin-left: auto;
     font-size: 19px;
   }
 }
@@ -450,13 +453,11 @@ h1 {
   }
 }
 .wrap {
+  margin: auto;
   min-width: 320px;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-}
-.wrap {
-  margin: auto;
 }
 @media (min-width: 768px) {
   .wrap {
@@ -466,6 +467,11 @@ h1 {
 @media (min-width: 1280px) {
   .wrap {
     width: 100%;
+  }
+}
+@media (min-width: 1280px) {
+  .wrap {
+    box-shadow: 0px 0px 20px 15px #ddd;
   }
 }
 .btn {
@@ -516,6 +522,7 @@ h1 {
 @media (min-width: 768px) {
   .hotel-form {
     position: absolute;
+    padding: 55px;
     top: 86px;
     z-index: 10;
   }
@@ -523,7 +530,7 @@ h1 {
 .hotel-form__label {
   box-sizing: border-box;
   display: block;
-  padding-left: 12px;
+  margin-left: 12px;
   font-size: 12px;
   text-align: left;
   line-height: 36px;
@@ -534,21 +541,22 @@ h1 {
     box-sizing: border-box;
     display: inline-block;
     vertical-align: top;
+    margin-bottom: 30px;
+    margin-left: 0;
     padding-left: 0;
     padding-right: 17px;
-    margin-bottom: 30px;
   }
 }
 .hotel-form__label--sum {
   box-sizing: border-box;
   display: inline-block;
   vertical-align: top;
-  float: left;
-  margin-right: 28%;
+  min-width: 102px;
 }
-.hotel-form__label--sum:nth-of-type(2n) {
-  float: right;
-  margin-right: 0;
+@media (min-width: 768px) {
+  .hotel-form__label--sum {
+    min-width: 114px;
+  }
 }
 .hotel-form__input {
   box-sizing: border-box;
@@ -581,21 +589,25 @@ h1 {
   display: inline-block;
   vertical-align: top;
   width: 114px;
-  float: left;
-}
-.hotel-form__input-count:nth-of-type(2n) {
-  float: right;
-  margin-right: 0;
 }
 .hotel-form__input--sum {
   box-sizing: border-box;
   display: inline-block;
   vertical-align: top;
-  padding-right: 12px;
+  padding-left: 0;
+  padding-right: 0;
   text-align: center;
 }
-.hotel-form__input--sum:nth-of-type(2n) {
-  margin-right: 0;
+.hotel-form__wrap {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+@media (min-width: 768px) {
+  .hotel-form__wrap label[for="kids"] {
+    padding-left: 50px;
+  }
 }
 .hotel-form__icon {
   position: absolute;
@@ -632,6 +644,7 @@ h1 {
   line-height: 58px;
   width: 100%;
   margin-top: 45px;
+  padding: 0;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
@@ -753,7 +766,7 @@ h1 {
   }
 }
 .reason-features.reason-features--other .reason-features__item {
-  padding: 21px 8% 15px;
+  padding: 21px 2% 15px;
   text-align: center;
   color: #000000;
   border-bottom: 1px solid #e6e6e6;
@@ -773,8 +786,10 @@ h1 {
   font-size: 16px;
   line-height: 38px;
 }
-.reason-features .reason-features__title {
+.reason-features.reason-features--other .reason-features__title {
   margin-bottom: 5px;
+  padding-left: 27%;
+  padding-right: 27%;
 }
 @media (min-width: 768px) {
   .reason-features__title {
@@ -806,6 +821,12 @@ h1 {
 }
 .reason-features.reason-features--other .reason-features__info {
   font-size: 12px;
+}
+@media (min-width: 1280px) {
+  .reason-features__info {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
 .reason-features__icon {
   position: absolute;
@@ -849,7 +870,7 @@ h1 {
 }
 .reason-features__icon.icon-food {
   background-image: url(../img/min/sprite.png);
-  background-position: 0px -198px;
+  background-position: -211px -122px;
   width: 37px;
   height: 35px;
 }
@@ -858,7 +879,7 @@ h1 {
     width: 68px;
     height: 75px;
     background-size: 880%;
-    background-position: 0px -359px;
+    background-position: -365px -200px;
   }
 }
 .social {
@@ -1030,13 +1051,34 @@ h1 {
 .nav__item--logo:before {
   position: absolute;
   background-image: url(../img/min/sprite.png);
-  background-position: -206px -58px;
+  background-position: 0px -178px;
   width: 67px;
   height: 56px;
   content: " ";
   left: 50%;
   margin-left: -33px;
   z-index: 10;
+}
+@media and (min-width: 768px) and (min-device-pixel-ratio: 2) {
+  .nav__item--logo:before {
+    width: 67px;
+    height: 56px;
+    background-image: url(../img/min/sprite.png);
+    background-position: -211px 0px;
+    width: 134px;
+    height: 112px;
+  }
+}
+@media and (min-width: 768px) and (min-device-pixel-ratio: 3) {
+  .nav__item--logo:before {
+    width: 67px;
+    height: 56px;
+    background-color: red;
+    background-image: url(../img/min/sprite.png);
+    background-position: 0px 0px;
+    width: 201px;
+    height: 168px;
+  }
 }
 .nav__item--logo::after {
   position: absolute;
@@ -1083,13 +1125,72 @@ h1 {
 @media (min-width: 768px) {
   .main-img {
     height: 510px;
-    background: url('../img/min/img-bottom.png') no-repeat 50% 100%, url('../img/min/photo-background@1x.jpg') no-repeat 0 0;
+    background: url('../img/min/img-bottom.png') no-repeat 0 100%, url('../img/min/photo-background@1x.jpg') no-repeat 0 0;
+    background-size: contain, cover;
   }
 }
-.main-img__text {
-  width: 100%;
-  height: 100%;
-  background: url('../img/img/text-welcome.svg') no-repeat 50% 10%, url('../img/img/text-tothegorgeous.svg') no-repeat 50% 30%, url('../img/img/text-sedona.svg') no-repeat 50% 50%, url('../img/img/text-becausecanyon.svg') no-repeat 50% 85%;
+@media and (min-width: 768px) and (min-device-pixel-ratio: 2) {
+  .main-img {
+    height: 510px;
+    background: url('../img/min/img-bottom.png') no-repeat 0 100%, url('../img/min/photo-background@2x.jpg') no-repeat 0 0;
+    background-size: contain, cover;
+  }
+}
+.svg-welcome {
+  display: block;
+  width: 145px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 47px;
+  fill: #81b3d2;
+}
+@media (min-width: 768px) {
+  .svg-welcome {
+    width: 190px;
+    padding-top: 76px;
+  }
+}
+.svg-text-tothegorgeous {
+  display: block;
+  width: 196px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 8px;
+  fill: #8a7d75;
+}
+@media (min-width: 768px) {
+  .svg-text-tothegorgeous {
+    width: 256px;
+    padding-top: 12px;
+  }
+}
+.svg-sedona {
+  display: block;
+  width: 280px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 60px;
+  fill: #fff;
+}
+@media (min-width: 768px) {
+  .svg-sedona {
+    width: 458px;
+    padding-top: 53px;
+  }
+}
+.svg-because {
+  display: block;
+  width: 197px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 70px;
+  fill: #fff;
+}
+@media (min-width: 768px) {
+  .svg-because {
+    width: 296px;
+    padding-top: 58px;
+  }
 }
 .hotel {
   max-width: 570px;

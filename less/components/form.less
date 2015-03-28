@@ -21,6 +21,7 @@
 
   @media (min-width: @screen-md) {
     position: absolute;
+    padding: 55px;
     top: 86px;
     z-index: 10;
   }
@@ -28,7 +29,7 @@
   &__label {
     box-sizing: border-box;
     display: block;
-    padding-left: 12px;
+    margin-left: 12px;
     font-size: 12px;
     text-align: left;
     line-height: @line-height--form;
@@ -36,23 +37,20 @@
 
     @media (min-width: @screen-md) {
       .inline-block;
+      margin-bottom: 30px;
+      margin-left: 0;
       padding-left: 0;
       padding-right: 17px;
-      margin-bottom: 30px;
     }
 
     &--sum {
       .inline-block;
-      float: left;
-      margin-right: 28%;
+      min-width: 102px;
 
       @media (min-width: @screen-md) {
+        min-width: 114px;
       }
 
-      &:nth-of-type(2n) {
-        float: right;
-        margin-right: 0;
-      }
     }
   }
 
@@ -85,27 +83,30 @@
     &-count {
       .inline-block;
       width: 114px;
-      float: left;
-
-      &:nth-of-type(2n) {
-        float: right;
-        margin-right: 0;
-      }
     }
 
     &--sum {
       .inline-block;
-      padding-right: 12px;
+      padding-left: 0;
+      padding-right: 0;
       text-align: center;
-
-      &:nth-of-type(2n) {
-        margin-right: 0;
-      }
     }
 
     &.date {
 
     }
+  }
+
+  &__wrap {
+    .inline-block;
+    width: 50%;
+
+    @media (min-width: @screen-md) {
+      label[for="kids"]{
+        padding-left: 50px;
+      }
+    }
+
   }
 
   &__icon {
@@ -146,6 +147,7 @@
     line-height: 58px;
     width: 100%;
     margin-top: 45px;
+    padding: 0;
     text-align: center;
     text-transform: uppercase;
     color: @text-color--main;

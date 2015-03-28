@@ -91,11 +91,15 @@
       }
 
       .reason-features.reason-features--other & {
-        padding: 21px 8% 15px;
+        padding: 21px 2% 15px;
         text-align: center;
         color: @text-color--note;
         border-bottom: 1px solid #e6e6e6;
         background: transparent;
+
+        @media (min-width: @screen-md) {
+          
+        }
 
         &:nth-child(3) {
           border-bottom: none;
@@ -115,8 +119,10 @@
       font-size: @font-size--h3;
       line-height: 38px;
 
-      .reason-features & {
+      .reason-features.reason-features--other & {
         margin-bottom: 5px;
+        padding-left: 27%;
+        padding-right: 27%;
       }
 
       @media (min-width: @screen-md) {
@@ -139,7 +145,7 @@
     &__info {
       font-size: 13px;
       line-height: @line-height--info;
-      
+
       @media (min-width: @screen-md) {
         line-height: 22px;
       }
@@ -152,6 +158,10 @@
         font-size: 12px;
       }
 
+      @media (min-width: @screen-lg) {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
     }
 
     &__icon {
@@ -198,7 +208,7 @@
           width: 68px;
           height: 75px;
           background-size: 880%;
-          background-position: 0px -359px;
+          background-position: -365px -200px;
         }
       }
     }

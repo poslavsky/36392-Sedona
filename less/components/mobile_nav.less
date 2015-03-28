@@ -40,6 +40,19 @@
           left: 50%;
           margin-left: -33px;
           z-index: 10;
+
+          @media and (min-width: @screen-md) and (min-device-pixel-ratio: 2) {
+            width: 67px;
+            height: 56px;
+            .sprite(@logo-sedona-2x);
+          }
+
+          @media and (min-width: @screen-md) and (min-device-pixel-ratio: 3) {
+            width: 67px;
+            height: 56px;
+            background-color: red;
+            .sprite(@logo-sedona-3x);
+          }
         }
 
         &::after {

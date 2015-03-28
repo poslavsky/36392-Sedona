@@ -1,10 +1,11 @@
 .wrap {
+  .container(@col-1);
   min-width: 320px;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  @media (min-width: @screen-lg) {
+     box-shadow: 0px 0px 20px 15px #ddd;
+   }
 }
 
-.wrap {
-  .container(@col-1);
-}
