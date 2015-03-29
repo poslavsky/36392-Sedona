@@ -1,19 +1,25 @@
 .btn {
   box-sizing: border-box;
   position: absolute;
-  width: @line-height--header;
+  width: 60px;
   height: @line-height--header;
-  top: 0;
   right: 0;
   border: none;
+  background-color: transparent;
   cursor: pointer;
+  outline: none;
   z-index: 10;
 
   &--cancel {
+    top: 0;
+    background: url("../img/min/app/svg/icon-cross.svg") no-repeat 50% 50%;
 
+    @media (min-width: @screen-md) {
+      display: none;
+    }
   }
 
   &--open {
-
+    background: url("../img/min/app/svg/icon-menu.svg") no-repeat 50% 50%;
   }
 }

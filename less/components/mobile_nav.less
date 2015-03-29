@@ -1,0 +1,128 @@
+.nav {
+  position: relative;
+  display: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+
+  @media (min-width: @screen-md) {
+    display: block;
+    animation: none;
+  }
+
+  &__item {
+    box-sizing: border-box;
+    display: block;
+    width: @col-1;
+    text-align: center;
+    line-height: 56px;
+    font-size: @font-size--nav;
+    font-weight: @font-weight--bold;
+    color: @text-color--main;
+    text-decoration: none;
+    box-shadow: inset 0 -1px 1px 0 #fff,
+                inset 0 1px 1px 0 #ddd;
+
+    &:hover {
+      background: #669ec0;
+    }
+
+    &:active {
+      background: #5496bd;
+      color: #88b2ce;
+    }
+
+      @media (min-width: @screen-md) {
+
+        &:hover {
+          background: #fff;
+          color: @bg-color;
+        }
+
+        &:active {
+          background: #fff;
+          opacity: .3;
+        }
+      }
+
+      &--logo {
+      position: absolute;
+      .inline-block;
+      content: " ";
+      width: 136px;
+      height: 56px;
+      bottom: -56px;
+      left: 50%;
+      margin-left: -68px;
+      box-shadow: none;
+      background-color: transparent;
+
+        &:before {
+          position: absolute;
+          .sprite(@logo-sedona-1x);
+          background-repeat: no-repeat;
+          content: " ";
+          left: 50%;
+          margin-left: -33px;
+          z-index: 10;
+
+          @media and (min-width: @screen-md) and (min-device-pixel-ratio: 2) {
+            width: 67px;
+            height: 56px;
+            .sprite(@logo-sedona-2x);
+          }
+
+          @media and (min-width: @screen-md) and (min-device-pixel-ratio: 3) {
+            width: 67px;
+            height: 56px;
+            .sprite(@logo-sedona-3x);
+          }
+        }
+
+        &::after {
+          position: absolute;
+          content: " ";
+          width: 136px;
+          height: 70px;
+          left: 50%;
+          margin-left: -68px;
+          background: url("../img/min/app/svg/form-logo-triangle.svg") no-repeat 50% 0;
+        }
+    }
+    @media (min-width: @screen-md) {
+      .inline-block;
+      width: @col-5;
+      font-size: 14px;
+      color: @text-color--note;
+      background-color: @bg-color--white;
+      box-shadow: none;
+
+      &--logo {
+        position: static;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+
+
+@keyframes nav {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.active-nav {
+  display: block;
+  animation-name: nav;
+  animation-duration: .7s;
+}
+
+.navbar {
+  position: relative;
+  min-height: 56px;
+
+  @media (min-width: @screen-md) {
+    display: none;
+  }
+}

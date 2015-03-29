@@ -1,36 +1,101 @@
 .social {
   margin-bottom: 40px;
 
+  .container(@col-3);
+  @media (min-width: @screen-md) {
+    .inline-block(@pos:middle);
+  }
+
   &__item {
-    .inline-block;
+    position: relative;
+    .inline-block(@pos:middle);
     width: 48px;
     height: 48px;
     margin-right: 6px;
-    background-color: @bg-color;
 
+    &:hover {
+      background-color: #669ec0;
+    }
 
-    &--tw {}
-    &--fb {}
-    &--youtube {}
+    &:active {
+      background-color: #5496bd;
+    }
+
+    &--tw{
+      background:  @bg-color url('../img/min/app/svg/icon-twitter.svg') no-repeat 50% 50%;
+    }
+
+    &--fb {
+      background:  @bg-color url('../img/min/app/svg/icon-facebook.svg') no-repeat 50% 50%;
+    }
+
+    &--youtube {
+      background:  @bg-color url('../img/min/app/svg/icon-youtube.svg') no-repeat 50% 50%;
+    }
   }
 }
 
 .design {
+
+  .container(@col-3);
+  @media (min-width: @screen-md) {
+    .inline-block(@pos:middle);
+  }
+
   a {
-    .inline-block;
+    position: relative;
+    .inline-block(@pos:middle);
     text-decoration: none;
     color: @text-color--note;
     font-size: 14px;
     line-height: 30px;
-    padding-right: 40px;
+    padding-right: 30px;
+
+    &:active {
+      color: #000;
+      opacity: 0.4;
+    }
   }
 
   &__by {
 
+    .svg-glukhanko {
+      .inline-block(@pos:middle);
+      width: 26px;
+      height: 30px;
+      margin-left: 5px;
+      fill: #000;
+
+      &:hover {
+        fill: @bg-color;
+      }
+
+      &:active {
+        fill: #000;
+        opacity: 0.4;
+      }
+    }
   }
 
   &__for {
 
+    .svg-htmlacademy{
+      .inline-block(@pos:middle);
+      width: 26px;
+      height: 34px;
+      margin-left: 5px;
+      fill: #000;
+
+      &:hover {
+        fill: @bg-color;
+      }
+
+      &:active {
+        fill: #000;
+        opacity: 0.4;
+      }
+
+    }
   }
 
 }

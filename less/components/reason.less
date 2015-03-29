@@ -1,0 +1,214 @@
+.reason {
+
+  &__box {
+    width: 100%;
+    font-size: 0;
+
+    @media (min-width: @screen-md) {
+      height: 256px;
+    }
+  }
+
+  &__img {
+    height: 256px;
+    overflow: hidden;
+
+    .container(@col-2);
+
+    @media (min-width: @screen-md) {
+      .inline-block;
+    }
+
+    img {
+      min-height: 256px;
+      @media (min-width: @screen-md) {
+        width: 100%;
+      }
+    }
+  }
+    &:nth-of-type(2) {
+
+      .reason-features__item {
+        padding-top: 33px;
+      }
+
+    @media (min-width: @screen-md) {
+      .reason-features__item {
+        float: right;
+      }
+    }
+  }
+
+  &-features {
+      font-size: 0;
+
+    &__item {
+      height: 100%;
+      padding: 58px 4.5% 25px;
+      font-size: 14px;
+      color: @text-color--main;
+      background-color: @bg-color;
+
+      .container(@col-3);
+
+      @media (min-width: @screen-md) {
+        .inline-block;
+        padding-top: 40px;
+      }
+
+      @media (min-width: @screen-lg) {
+        padding-left: 7%;
+        padding-right: 7%;
+      }
+
+      .reason-features & {
+        padding-left: 70px;
+        padding-top: 23px;
+        padding-bottom: 0;
+        text-align: left;
+        color: @text-color--note;
+        background: @bg-color--white;
+
+        &:nth-of-type(1) {
+          padding-top: 33px;
+        }
+
+        &:last-of-type {
+          padding-bottom: 35px;
+        }
+
+        @media (min-width: @screen-md) {
+          padding-right: 4.5%;
+          padding-bottom: 40px;
+          padding-left: 4.5%;
+          text-align: center;
+        }
+
+        @media (min-width: @screen-lg) {
+          padding-right: 5.5%;
+          padding-left: 5.5%;
+        }
+      }
+
+      .reason-features.reason-features--other & {
+        padding: 21px 2% 15px;
+        text-align: center;
+        color: @text-color--note;
+        border-bottom: 1px solid #e6e6e6;
+        background: transparent;
+
+        &:nth-child(3) {
+          border-bottom: none;
+        }
+      }
+    }
+
+    &--other {
+      padding-left: 20px;
+      padding-right: 20px;
+      background:#eee;
+    }
+
+    &__title {
+      position: relative;
+      margin: 0 auto;
+      font-size: @font-size--h3;
+      line-height: 38px;
+
+      .reason-features.reason-features--other & {
+        margin-bottom: 5px;
+        padding-left: 27%;
+        padding-right: 27%;
+      }
+
+      @media (min-width: @screen-md) {
+        margin-bottom: 5px;
+        line-height: 30px;
+        font-size: 18px;
+      }
+
+    }
+
+    &__number {
+      display: block;
+      line-height: @line-height--numb;
+
+       @media (min-width: @screen-md) {
+          margin-bottom: 20px;
+       }
+    }
+
+    &__info {
+      font-size: 13px;
+      line-height: @line-height--info;
+
+      @media (min-width: @screen-md) {
+        line-height: 22px;
+      }
+
+      .reason-features & {
+        line-height: 22px;
+      }
+
+      .reason-features.reason-features--other & {
+        font-size: 12px;
+      }
+
+      @media (min-width: @screen-lg) {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+    }
+
+    &__icon {
+      position: absolute;
+      content: " ";
+      left: -46px;
+      top: -5px;
+      .inline-block;
+
+      @media (min-width: @screen-md) {
+        position: static;
+        display: block;
+        margin-right: auto;
+        margin-bottom: 23px;
+        margin-left: auto;
+      }
+
+      &.icon-house {
+        width: 37px;
+        height: 37px;
+        background: url('../img/min/app/svg/icon-house.svg') no-repeat 0 0;
+        background-size: 100%;
+
+        @media (min-width: @screen-md) {
+          width: 73px;
+          height: 73px;
+        }
+      }
+
+      &.icon-price {
+        width: 32px;
+        height: 38px;
+        background: url('../img/min/app/svg/icon-gift.svg') no-repeat 0 0;
+        background-size: 100%;
+
+        @media (min-width: @screen-md) {
+          width: 65px;
+          height: 77px;
+        }
+      }
+
+      &.icon-food {
+        .sprite(@food);
+
+        @media (min-width: @screen-md) {
+          width: 68px;
+          height: 75px;
+          background-size: 880%;
+          background-position: -365px -200px;
+        }
+      }
+    }
+  }
+}

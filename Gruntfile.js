@@ -32,6 +32,26 @@ module.exports = function(grunt) {
       }
     },
 
+    svgmin: {
+        options: {
+            plugins: [
+                {
+                    removeViewBox: false
+                }, {
+                    removeUselessStrokeAndFill: false
+                }
+            ]
+        },
+        dist: {
+          files: [{
+              expand: true,
+              cwd: 'img',
+              src: ['app/svg/*.svg'],
+              dest: 'img/min/',
+              ext: '.svg'
+          }]
+        }
+    },
 
     less: {
       style: {
@@ -96,6 +116,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', [
     'sprite',
     'imagemin',
+    'svgmin',
     'less',
     'autoprefixer',
     'notify',
