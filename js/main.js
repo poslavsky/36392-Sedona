@@ -1,36 +1,20 @@
 (function() {
 
-  var open = document.querySelector(".btn--open");
-  var close = document.querySelector(".btn--cancel");
-  var nav = document.querySelector(".nav");
-
-  open.addEventListener("click", function (event) {
-      event.preventDefault();
-
-      nav.classList.add("active-nav");
-
-  });
-
-  close.addEventListener("click", function (event) {
-      event.preventDefault();
-
-      nav.classList.remove("active-nav");
-
-  });
-
-  
-
-  var plus = document.querySelectorAll(".hotel-form__icon--plus");
-  var minus = document.querySelectorAll(".hotel-form__icon--minus");
+  var plus = document.querySelectorAll(".plus");
+  var minus = document.querySelectorAll(".minus");
 
   for(var i = 0; i < plus.length; i++) {
 
     plus[i].addEventListener("click", function (event) {
       event.preventDefault();
 
-      var count = this.parentNode.querySelector(".hotel-form__input--sum");
+      var count = this.parentNode.querySelector(".counter-input");
 
-      count.value =  (parseInt(count.value) + 1);
+      var val =  (parseInt(count.value) + 1);
+
+      if (isNaN(val)) val = 0;
+
+      count.value =  val;
 
     })
   };
@@ -40,15 +24,14 @@
     minus[i].addEventListener("click", function (event) {
       event.preventDefault();
 
-      var count = this.parentNode.querySelector(".hotel-form__input--sum");
+      var count = this.parentNode.querySelector(".counter-input");
       var val = (parseInt(count.value) - 1);
 
-      if (val < 0) val = 0;
+      if (val < 0 || isNaN(val)) val = 0;
 
       count.value =  val;
 
     })
   };
-
 
 })();
